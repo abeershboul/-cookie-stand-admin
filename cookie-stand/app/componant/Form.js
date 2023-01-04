@@ -1,4 +1,6 @@
 import React from "react";
+import ReportTable from './ReportTable'
+
 import { useState } from "react";
 
 export function Form(){
@@ -6,9 +8,6 @@ export function Form(){
     const [minmum, setminmum] = useState(0);
     const [max, setmax] = useState(0);
     const [Avarages, setAvarages] = useState(0);
-
-
-
     const [fullReplyState, setFullReplyState] = useState([]);
 
     const changehandeler = (e) => {
@@ -124,13 +123,34 @@ return(
 
 {/* result section */}
 <section className="w-full pt-10 text-center shadow-lg shadow-black-50">
-                {fullReplyState.length > 0 && fullReplyState.map((item,index)=>{
+                {/* {fullReplyState.length > 0 && fullReplyState.map((item,index)=>{
                     return(
                         <div>
                             <p>'location' : {item.location}  ,'Minimum custumer par Hour': {item.Minimum} , 'Maximum custumer par Hour' : {item.Max} , 'Avaragar' : {Avarages}</p>
                         </div>
                     )
-                })}
+                })} */}
+
+                {fullReplyState.length === 0 && (
+          <div className="min-h-screen">
+            
+            <h2 className=" font-bold text-3xl">No Cookie Stands Available</h2>
+            </div>
+            )}
+            {fullReplyState.length > 0 && (
+          <div >
+            
+            <ReportTable
+            data ={fullReplyState}
+            
+            />
+            </div>
+            )}
+
+
+
+
+
             </section>
 
 </>
