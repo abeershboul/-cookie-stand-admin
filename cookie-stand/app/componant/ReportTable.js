@@ -91,7 +91,7 @@ return (
             </tr>
         </tbody>
     </table>
-    <h2>
+    <h2  className="min-h-screen  dark:text-white">
         {locations} Locations Worldwide
       </h2>
 </div>
