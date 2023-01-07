@@ -50,21 +50,21 @@ export function Form(){
 
 return(
 <>
-<div class="mt-10 sm:mt-0">
-  <div class="md:grid md:grid-cols-3 md:gap-6">
+<div class="mt-10 sm:mt-0 dark:bg-black">
+  <div class="md:grid md:grid-cols-3 md:gap-6 dark:bg-black">
     <div class="md:col-span-1">
       <div class="px-4 sm:px-0">
-        <h3 class="text-lg font-medium leading-6 text-gray-900">Cookies Stand</h3>
+        <h3 class="text-lg font-medium leading-6 text-gray-900 dark:text-white">Cookies Stand</h3>
        
       </div>
     </div>
-    <div class="mt-5 md:mt-0 md:col-span-2">
+    <div class="mt-5 md:mt-0 md:col-span-2 dark:bg-black">
       <form onSubmit={onSubmitHandler} action="#" method="POST">
         <div class="shadow overflow-hidden sm:rounded-md">
-          <div class="px-4 py-5 bg-white sm:p-6">
+          <div class="px-4 py-5 bg-white sm:p-6 dark:bg-black">
             <div class="grid grid-cols-6 gap-6">
               <div class="col-span-6 sm:col-span-3">
-                <label for="Location" class="block text-sm font-medium text-gray-700">Location</label>
+                <label for="Location" class="block text-sm font-medium text-gray-700 dark:text-white">Location</label>
                 <input type="text"
                 onChange={changehandeler}
                  name="Location"
@@ -74,7 +74,7 @@ return(
               </div>
 
               <div class="col-span-6 sm:col-span-3">
-                <label for="Minimum" class="block text-sm font-medium text-gray-700">Minimum custumer par Hour</label>
+                <label for="Minimum" class="block text-sm font-medium text-gray-700 dark:text-white dark:text-white">Minimum custumer par Hour</label>
                 <input type="number"
                 onChange={minhandeler}
                  name="Minimum" 
@@ -84,7 +84,7 @@ return(
               </div>
 
               <div class="col-span-6 sm:col-span-4">
-                <label for="Maximum" class="block text-sm font-medium text-gray-700">Maximum custumer par Hour</label>
+                <label for="Maximum" class="block text-sm font-medium text-gray-700 dark:text-white">Maximum custumer par Hour</label>
                 <input type="number"
                 onChange={maxhandeler}
                  name="Maximum" id="Maximum" 
@@ -94,7 +94,7 @@ return(
               
 
               <div class="col-span-6">
-                <label for="Avarage" class="block text-sm font-medium text-gray-700">Avarage number par sale</label>
+                <label for="Avarage" class="block text-sm font-medium text-gray-700 dark:text-white">Avarage number par sale</label>
                 <input type="number" 
                 onChange={avaragehandeler}
 
@@ -132,9 +132,9 @@ return(
                 })} */}
 
                 {fullReplyState.length === 0 && (
-          <div className="min-h-screen">
+          <div className="min-h-screen  dark:text-white" >
             
-            <h2 className=" font-bold text-3xl">No Cookie Stands Available</h2>
+            <h2 >No Cookie Stands Available</h2>
             </div>
             )}
             {fullReplyState.length > 0 && (
