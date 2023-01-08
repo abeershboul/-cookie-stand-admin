@@ -3,6 +3,7 @@
 import './globals.css'
 import { Footer } from './componant/Footer'
 import { Header } from './componant/Header'
+import { AuthWrapper } from './contexts/auth';
 import ThemeWrapper from './contexts/theme'
 
 
@@ -14,6 +15,7 @@ export default function RootLayout({ children }) {
         head.jsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
+      <AuthWrapper>
       <ThemeWrapper>
       <body>
         <Header/>
@@ -31,6 +33,7 @@ export default function RootLayout({ children }) {
 
 
       </ThemeWrapper>
+      </AuthWrapper>
 
 
 
